@@ -1,13 +1,7 @@
-sumSquare = 0
-squareSum = 0
-for i in range(1, 101): #sum of squares
-    sS = i**2
-    sumSquare += sS
+sSq = []
 
-for i in range(1, 101):
-    squareSum += i
-squareSum **= 2
+for i in range(1,11):
+    s = i**2
+    sSq.append(s)
 
-print(int(sumSquare))
-print(int(squareSum))
-print(int(squareSum - sumSquare))
+print(sum(sSq))
