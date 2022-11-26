@@ -7,10 +7,14 @@ def findDivisorsSum(num):
     for n in divList:
         sum += n
     return sum
+amicable = set()
 
-for n in range(1, 500):
+for n in range(10000):
     x = findDivisorsSum(n)
     y = findDivisorsSum(x)
-    if x == y:
-        print(str(n) + ',' + str(x) + ' ' + str(y))
-    
+    if n == y and x != y:
+        amicable.add(n)
+        amicable.add(x)
+
+print(amicable)
+print(sum(amicable))
