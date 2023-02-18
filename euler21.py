@@ -3,10 +3,8 @@ def findDivisorsSum(num):
     for i in range(1, num):
         if num % i == 0:
             divList.append(i)
-    sum = 0
-    for n in divList:
-        sum += n
-    return sum
+    return sum(divList)
+
 amicable = set()
 
 for n in range(10000):
